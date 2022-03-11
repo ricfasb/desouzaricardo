@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class HistoricoService {
   
-  private url = 'http://localhost:8080/';
+  private url = 'https://ricardospringapi.herokuapp.com/';
   private urlDadosPessoais = this.url + 'dadospessoais';
   private urlExperiencias = this.url + 'experiencias';
   private urlFormacoes = this.url + 'formacoes';
