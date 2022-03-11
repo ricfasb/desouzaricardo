@@ -1,0 +1,12 @@
+<h5 style="background-color: #FFF; width: fit-content; border-radius: 10px; padding: 2px 15px 2px 15px;">Formação</h5>
+
+<div class="row">
+    <div class="col" *ngFor="let formacao of listaFormacoes">  
+        <div class="card card-exp">
+            <h5 class="card-header">{{ formacao.nome }}</h5>
+            <div class="card-body">
+                <h5 class="card-title">{{ formacao.instituicao }}</h5>
+            </div>        
+        </div>
+    </div>
+</div>

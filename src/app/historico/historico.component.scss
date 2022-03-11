@@ -1,6 +1,7 @@
 
  .card-exp {
      margin-bottom: 10px;
+     height: 315px;
  }
 
  .container-exp {
@@ -15,4 +16,9 @@
 .card {
     border-color: #003781;
     border-radius: 15px;
+}
+
+.card-header {
+    background-color: #003781;
+    color: #FFF;
 }

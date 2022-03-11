@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HistoricoComponent } from './historico/historico.component';
 import { DadosPessoaisComponent } from './dados-pessoais/dados-pessoais.component';
 import { TecnologiasComponent } from './tecnologias/tecnologias.component';
+import { FormacaoComponent } from './formacao/formacao.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HistoricoComponent,
     DadosPessoaisComponent,
-    TecnologiasComponent
+    TecnologiasComponent,
+    FormacaoComponent
   ],
   imports: [
     BrowserModule,

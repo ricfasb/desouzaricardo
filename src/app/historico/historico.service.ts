@@ -6,8 +6,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class HistoricoService {
   
-  private urlDadosPessoais = 'http://localhost:8080/dadospessoais';
-  private urlExperiencias = 'http://localhost:8080/experiencias';
+  private url = 'https://ricardospringapi.herokuapp.com/';
+  private urlDadosPessoais = this.url + 'dadospessoais';
+  private urlExperiencias = this.url + 'experiencias';
+  private urlFormacoes = this.url + 'formacoes';
   private corsHeaders: HttpHeaders;
 
   constructor(private httClient: HttpClient) {
@@ -26,6 +28,12 @@ export class HistoricoService {
 
   experiencias() {
     return this.httClient.get(this.urlExperiencias, {
+      headers: this.corsHeaders
+    });
+  }
+
+  formacoes() {
+    return this.httClient.get(this.urlFormacoes, {
       headers: this.corsHeaders
     });
   }

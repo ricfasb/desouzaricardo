@@ -1,19 +1,22 @@
 <div class="container-contato">
 
     <img 
-        src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+        src='{{ pessoa?.foto }}'
         class="rounded-circle"
         style="width: 150px;"
         alt="Avatar"
         />
 
-    <h4>{{ pessoa?.nome }}</h4>
-
-    <h1>CONTATO</h1>
-    <ul>
-        <li>{{ pessoa?.idade }}</li>
-        <li>{{ pessoa?.celular }}</li>
-        <li>{{ pessoa?.email }}</li>
-    </ul>        
+    <div style="padding: 10px; color: #FFF;">
+        <h5>{{ pessoa?.nome }}</h5>
+    </div>
+    
+    <div style="text-align: left;">
+        <h5 style="background-color: #FFF; width: fit-content; border-radius: 10px; padding: 2px 15px 2px 15px;">Contato</h5>
+        <ul style="color: #FFF;">
+            <li>{{ pessoa?.celular }}</li>
+            <li>{{ pessoa?.email }}</li>
+        </ul>
+    </div>        
 
 </div>

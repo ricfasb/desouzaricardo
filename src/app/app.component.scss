@@ -5,3 +5,12 @@ body {
 .left-side {
     background-color: #003781;
 }
+
+body, html {
+    min-height:100vh;
+    height: 100%;
+}
+
+.container-fluid {
+    min-height:100vh;
+}

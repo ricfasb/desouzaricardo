@@ -1,16 +1,14 @@
+<div class="container-exp">  
+    <h5>EXPERIÊNCIA PROFISSIONAL</h5>
+</div>
 <div class="row">
-    <div class="col-12">  
-        <div class="container-exp">  
-            <h5>EXPERIÊNCIA PROFISSIONAL</h5>
-        </div>
-        <div class="card card-exp" *ngFor="let experiencia of listaExperiencias">
+    <div class="col-6" *ngFor="let experiencia of listaExperiencias">  
+        <div class="card card-exp">
             <h5 class="card-header">{{ experiencia.empresa.nome }}</h5>
             <div class="card-body">
                 <h5 class="card-title">{{ experiencia.cargo }}</h5>
-                
-                <p>{{ experiencia.atividades }}</p>  
                 <div *ngFor="let atividade of experiencia.atividades">
-                    <p class="card-text">{{ atividade.descricao }}</p>    
+                    <span style="margin-left: 10px;" class="card-text">{{ atividade.descricao }}</span>    
                 </div>
             </div>        
         </div>
