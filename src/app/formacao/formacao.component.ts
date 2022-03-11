@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Formacao } from '../models/formacao.model';
-import { HistoricoService } from '../historico/historico.service';
+import { CurriculoService } from '../service/curriculo.service';
 
 @Component({
   selector: 'app-formacao',
@@ -11,12 +11,12 @@ export class FormacaoComponent implements OnInit {
 
   listaFormacoes: Formacao[];
   
-  constructor(private historicoService: HistoricoService) { 
+  constructor(private curriculoService: CurriculoService) { 
     this.listaFormacoes = []
   }
 
   ngOnInit(): void {
-    this.historicoService.formacoes().subscribe((formacoes : Formacao[]) => {
+    this.curriculoService.formacoes().subscribe((formacoes : Formacao[]) => {
       this.listaFormacoes = formacoes;
     });
   }

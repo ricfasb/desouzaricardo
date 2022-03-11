@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HistoricoService } from '../historico/historico.service';
 import { Pessoa } from '../models/pessoa.model';
+import { CurriculoService } from '../service/curriculo.service';
 
 @Component({
   selector: 'app-dados-pessoais',
@@ -11,10 +11,10 @@ export class DadosPessoaisComponent implements OnInit {
 
   pessoa: Pessoa;
 
-  constructor(private historicoService: HistoricoService) { }
+  constructor(private curriculoService: CurriculoService) { }
 
   ngOnInit(): void {
-    this.historicoService.dadosPessoais().subscribe((pessoa : Pessoa) => {
+    this.curriculoService.dadosPessoais().subscribe((pessoa : Pessoa) => {
       this.pessoa = pessoa;
     });
   }
