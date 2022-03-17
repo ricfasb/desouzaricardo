@@ -1,4 +1,4 @@
-<div class="container-exp">  
+<div class="container-exp" *ngIf="listaExperiencias?.length > 0">  
     <h5>EXPERIÊNCIA PROFISSIONAL</h5>
 </div>
 <div class="row">
@@ -6,7 +6,10 @@
         <div class="card card-exp">
             <h5 class="card-header">{{ experiencia.empresa.nome }}</h5>
             <div class="card-body">
-                <h5 class="card-title">{{ experiencia.cargo }}</h5>
+                <div style="display: inline-flex;">
+                    <h5 style="float: left" class="card-title">{{ experiencia.cargo }}</h5>
+                    <span style="float: right; text-align: right;">{{ experiencia.inicio }}</span>
+                </div>
                 <div *ngFor="let atividade of experiencia.atividades">
                     <span style="margin-left: 10px;" class="card-text">{{ atividade.descricao }}</span>    
                 </div>

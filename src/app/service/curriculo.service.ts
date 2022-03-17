@@ -12,10 +12,10 @@ export class CurriculoService {
   private corsHeaders: HttpHeaders;
 
   constructor(private httClient: HttpClient) {
-    
     this.corsHeaders = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Accept': 'application/json'
+      'Accept': 'application/json',
+      'Access-Control-Allow-Origin': '*'
     });
   }
 

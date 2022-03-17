@@ -7,5 +7,6 @@ export interface Experiencia {
     pessoa: Pessoa;
     cargo: string;
     atividades: Array<Atividade>;
-    
+    inicio: Date;
+    fim: Date;
 }
